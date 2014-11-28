@@ -11,13 +11,19 @@ dat <-  read.csv("outcome-of-care-measures.csv", na.strings = "Not Available")
 
 
 if outcome == "heart attack" {
-	vari <- 11
-
+	subs <- (subset(dat, State == state))
+	subs <- subs[ order(subs[,11]), ]
+	subs[[1,2]]
+	
 	elseif outcome == "heart failure" {
-	vari <- 17
-
+	subs <- (subset(dat, State == state))
+	subs <- subs[ order(subs[,17]), ]
+	subs[[1,2]]
+	
 	elseif outcome == "pneumonia" {
-	vari <- 23
+	subs <- (subset(dat, State == state))
+	subs <- subs[ order(subs[,23]), ]
+	subs[[1,2]]
 
 	else {
 	print("invalid outcome")
@@ -26,6 +32,4 @@ if outcome == "heart attack" {
 
 
 
- subs <- (subset(dat, State == state))
- 
- head(subs[ order(subs[,11]), ])
+
