@@ -24,4 +24,8 @@ if outcome == "heart attack" {
 }
 
 
-outcome[ order(outcome[,11]), ])
+
+
+ subs <- (subset(dat, State == state))
+ 
+ head(subs[ order(subs[,11]), ])
